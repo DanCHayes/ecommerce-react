@@ -1,10 +1,19 @@
 import React from 'react';
-import HomePage from './views/homepage/homepage'
+import { Switch, Route } from "react-router-dom";
+
+import HomePage from './views/homepage/homepage';
+import ShopPage from './views/shop/shop';
+
 import './App.css';
 
 const App = () => {
   return (
-    <HomePage />
+    <div>
+      <Switch>
+        <Route exact path='/' component={HomePage}></Route>
+        <Route exact path='/shop' component={ShopPage}></Route>
+      </Switch>
+    </div>
   );
 }
 
